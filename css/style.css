@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f3e5d7;
+}
+
+.section {
+  padding: 40px;
+  background: #fff;
+  width: 736px;
+  margin: 0 auto;
+  height: 1508px;
+}
+.section .user-info {
+  width: 656px;
+  height: 112px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section .user-info h1 {
+  height: 80px;
+  font-size: 40px;
+  font-family: Young Serif;
+  font-weight: 400;
+  width: 100%;
+  max-width: 656px;
+  line-height: 100%;
+  height: 40px;
+}
+.section .user-info p {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 400;
+}
