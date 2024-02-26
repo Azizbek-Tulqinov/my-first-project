@@ -1,42 +1,204 @@
 @import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Outfit", sans-serif;
 }
 body {
   background: #f3e5d7;
+  padding: 30px 0px;
+}
+@mixin p {
+  color: #5f564d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
 }
 .section {
   padding: 40px;
   background: #fff;
   width: 736px;
   margin: 0 auto;
-  height: 1508px;
-
-  .user-info {
-    width: 656px;
-    height: 112px;
+  height: 1708px;
+  border-radius: 10px;
+  img {
+    border-radius: 12px;
+    max-width: 656px;
+    width: 100%;
+  }
+  .user-infos {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 656px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    h1 {
-      height: 80px;
-      font-size: 40px;
-      font-family: Young Serif;
-      font-weight: 400;
-      width: 100%;
-      max-width: 656px;
-      line-height: 100%;
-      height: 40px;
+    gap: 32px;
+    .user-info_title {
+      height: 112px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h1 {
+        font-size: 40px;
+        font-family: Young Serif;
+        font-weight: 400;
+        color: #312e2c;
+      }
+      p {
+        @include p;
+      }
     }
-    p {
-      margin-top: 8px;
-      font-size: 16px;
-      font-weight: 400;
+    .preparation {
+      padding: 28px;
+      background: #fff7fb;
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #7a284e;
+      }
+      ul {
+        padding: 0 25px;
+        li {
+          color: #7a284e;
+          p {
+            margin: 8px 0px 0px 16px;
+            @include p;
+          }
+        }
+      }
+    }
+    .ingredients {
+      max-width: 656px;
+      height: 204px;
+      h4 {
+        font-size: 28px;
+        font-family: Young Serif;
+        font-weight: 600;
+        color: #7a284e;
+      }
+      ul {
+        margin-top: 15px;
+        padding: 0 25px;
+        li {
+          color: #7a284e;
+          span {
+            display: block;
+            margin: 5px 0px 0px 16px;
+            @include p;
+          }
+        }
+      }
+    }
+    .line {
+      border: 1px solid #e3ddd7;
+      max-width: 656px;
+      height: 0px;
+    }
+    .instructions {
+      max-width: 656px;
+      height: 332px;
+      background: #fff7fb;
+      h4 {
+        font-size: 28px;
+        font-family: Young Serif;
+        font-weight: 600;
+        color: #7a284e;
+      }
+      ol {
+        margin-top: 15px;
+        padding: 0 25px;
+        li {
+          font-weight: 700;
+          font-size: 16px;
+          color: #7a284e;
+          p {
+            margin: 5px 0px 0px 16px;
+            @include p;
+          }
+        }
+      }
+    }
+    .nutrition {
+      max-xwidth: 656px;
+      height: 278px;
+      background: #fff7fb;
+
+      h4 {
+        font-size: 28px;
+        font-family: Young Serif;
+        font-weight: 600;
+        color: #7a284e;
+      }
+      p {
+        margin-top: 12px;
+        @include p;
+      }
+      table {
+        border-spacing: 0;
+        width: 100%;
+        td {
+          @include p;
+          padding: 12px 0px 12px 32px;
+          border-bottom: 1px solid #e3ddd7;
+        }
+        .weight {
+          font-weight: 700;
+          color: #854632;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    padding: 15px 0;
+  }
+  .section {
+    border-radius: 0;
+    padding: 0px;
+    width: 375px;
+    height: 2123px;
+    img {
+      border-radius: 0px;
+      width: 375px;
+      height: 171px;
+    }
+    .user-infos {
+      margin: 0px;
+      padding: 40px 32px;
+      width: 375px;
+      height: 1949px;
+      .user-info_title {
+        gap: 20px;
+        width: 311px;
+        height: 246px;
+        h1 {
+          font-size: 36px;
+        }
+      }
+      .preparation {
+        padding: 24px;
+        border-radius: 12px;
+        width: 311px;
+        height: 196px;
+      }
+      .ingredients {
+        width: 311px;
+        height: 228px;
+      }
+      .instructions {
+        width: 311px;
+        height: 718px;
+      }
+      .nutrition {
+        width: 311px;
+        height: 312px;
+        table {
+          margin-top: 10px;
+        }
+      }
     }
   }
 }
